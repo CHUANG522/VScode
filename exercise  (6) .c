@@ -5,7 +5,7 @@
 
 int main(void) {
 	
-	
+	printf("HEllo world,慧");
 	
 	
 	

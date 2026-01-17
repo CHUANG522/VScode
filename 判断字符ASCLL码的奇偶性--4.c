@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 	if (x % 2 == 1) {
 		printf("YES! \n ");
 	} else {
-		printf("It is not Å¼Êı!");
+		printf("It is not å¶æ•°!");
 	}
 	return 0;
 }

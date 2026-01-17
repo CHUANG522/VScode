@@ -1,0 +1,25 @@
+# 核心：忽略所有Windows可执行文件
+*.exe
+# 忽略编译中间目标文件
+*.obj
+*.o
+# 忽略动态链接库/静态链接库
+*.dll
+*.lib
+# 忽略编译器生成的输出目录
+bin/
+build/
+Debug/
+Release/
+out/
+# 忽略编辑器配置文件
+.vscode/
+.idea/
+*.sln
+*.suo
+# 忽略系统垃圾文件
+*.log
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
