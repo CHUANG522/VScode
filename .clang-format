@@ -1,49 +1,19 @@
-# 基础风格（最接近 Linux 内核风格）
-BasedOnStyle: GNU
-
-# 缩进与换行
-IndentWidth: 4
+BasedOnStyle: Google  # 基于 Google 官方 C 风格
+Language: Cpp
+IndentWidth: 4        # 4 空格缩进（通用友好）
 TabWidth: 4
-UseTab: Never
-ColumnLimit: 80
-BreakBeforeBraces: Linux
-AllowShortIfStatementsOnASingleLine: false
+UseTab: Never         # 禁用 Tab，全部用空格
+BreakBeforeBraces: Allman  # 大括号单独一行
+ColumnLimit: 100      # 行宽 100 字符（比内核宽松）
 
-# 空格与对齐
-AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: true
-AlignConsecutiveDeclarations: true
-SpaceBeforeParens: ControlStatements
+# 二维数组优化
+BinPackArguments: false
+AllowAllArgumentsOnNextLine: false
+AlignArrayOfStructures: Left
+BreakArrays: true
 
-# 其他优化
-PointerAlignment: Right
-SortIncludes: true
-
-# 基于 LLVM 风格修改（clang-format 默认风格）
-BasedOnStyle: LLVM
-
-# -------------------------- 数组相关核心配置 --------------------------
-# 数组初始化时，花括号的换行规则
-BraceWrapping:
-  AfterArray: true          # 数组的左花括号 { 后换行（比如 int arr[] = { 换行）
-  BeforeArrayClosingBrace: true  # 数组的右花括号 } 前换行（比如最后一个元素后换行再写 }）
-  SplitEmptyFunction: false # 空数组不额外换行（避免 int arr[] = { }; 变成多行）
-
-# 数组元素的缩进规则
-IndentWidth: 4             # 缩进 4 个空格（可改成 2，根据你的习惯）
-ContinuationIndentWidth: 4 # 数组换行后的元素缩进（和上面保持一致）
-
-# 数组初始化时的元素排版
-AllowAllArgumentsOnNextLine: false  # 不允许所有数组元素挤在一行
-AllowAllParametersOfDeclarationOnNextLine: false # 数组声明时不挤一行
-AlignConsecutiveAssignments: true   # 数组元素如果有赋值，等号对齐（可选，看习惯）
-
-# 禁止数组元素自动合并成一行
-BreakArrayInitializers: Always  # 数组元素强制换行（哪怕只有 2 个元素）
-BreakArrayInitializersBeforeComma: false # 逗号在元素后面（默认习惯：1, 2, 3）
-
-# -------------------------- 其他辅助配置（可选，优化整体代码风格） --------------------------
-Language: C                 # 只对 C 语言生效（不影响其他文件）
-TabWidth: 4                 # Tab 键等价于 4 个空格
-UseTab: Never               # 禁用 Tab 键，统一用空格缩进（避免不同编辑器显示不一致）
-ColumnLimit: 120            # 代码行最大宽度（超过才换行，避免数组元素被强制拆分）
+# 细节配置
+SpaceAfterCStyleCast: true  # 强制转换后加空格：(int) x
+SpaceBeforeParens: ControlStatements  # 控制语句后加空格：if (x)
+SortIncludes: true          # 自动排序头文件（方便协作）
+AllowShortBlocksOnASingleLine: false  # 禁止短代码块单行
