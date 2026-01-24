@@ -3,35 +3,29 @@
 #include <time.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[])
+{
+    srand(time(0));
+    int a = rand();
+    int x = a % 100;
+    int P = 0;
+    int count = 0;
 
-	srand(time(0));
-	int a = rand();
-	int x = a % 100;
-	int P = 0;
-	int count = 0;
+    do
+    {
+        count++;
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ë£º");
+        scanf("%d", &P);
+        if (P > x)
+        {
+            printf("ï¿½ï¿½Â´ï¿½ï¿½ï¿½\n");
+        }
+        else if (P < x)
+        {
+            printf("ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½\n");
+        }
+    } while (P != x);
+    printf("ï¿½ï¿½Ï²ï¿½ï¿½Â¶ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%dï¿½ï¿½", count);
 
-	do {
-		count++;
-		printf("ÇëÊäÈëÄãµÄ²ÂÏë£º");
-		scanf("%d", &P);
-		if (P > x) {
-			printf("Äã²Â´óÁË\n");
-		} else if (P < x) {
-			printf("Äã²ÂÐ¡ÁË\n");
-		}
-	} while (P != x);
-	printf("¹§Ï²Äã²Â¶ÔÁË£¬Äã²ÂÁË%d´Î", count);
-
-
-
-
-
-
-
-
-
-
-
-	return 0;
+    return 0;
 }

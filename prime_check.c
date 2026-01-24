@@ -3,40 +3,35 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[])
+{
+    int n = 0;
+    int x = 0;
+    int Q = 1;
+    int count = 0;
+    int X = 0;
 
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½");
+    scanf("%d", &X);
 
-	int n = 0;
-	int x = 0;
-	int Q = 1;
-	int count = 0;
-	int X = 0;
+    for (x = 2; x < X; x++)
+    {
+        Q = 1;
+        for (n = 2; n < x; n++)
+        {
+            if (x % n == 0)
+            {
+                Q = 0;
+                break;
+            }
+        }
+        if (Q == 1)
+        {
+            printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%d\n", x);
+            count++;
+        }
+    }
+    printf("%dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½Ç£ï¿½%d", X, count);
 
-	printf("ÊäÈëÄãÒªÇóµÄËØÊý·¶Î§£º");
-	scanf("%d", &X);
-
-	for (x = 2; x < X; x++) {
-		Q = 1;
-		for (n = 2; n < x; n++) {
-
-			if (x % n == 0) {
-				Q = 0;
-				break;
-			}
-		}
-		if (Q == 1) {
-			printf("ËØÊýÊÇ%d\n", x);
-			count++;
-		}
-	}
-	printf("%dÖÐËØÊýµÄ¸öÊýÊÇ£º%d", X, count);
-
-
-
-
-
-
-
-
-	return 0;
+    return 0;
 }
