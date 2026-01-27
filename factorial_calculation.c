@@ -3,30 +3,21 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[])
+{
+    int n = 0;
+    int i = 1;
+    int fact = 1;
 
-	int n = 0;
-	int i = 1;
-	int fact = 1;
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½×³ï¿½ï¿½ï¿½n");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+        printf("factï¿½ï¿½Öµï¿½Ç£ï¿½%d\n", fact);
+    }
 
-	printf("ÊäÈëÄãµÄ½×³ËÊýn");
-	scanf("%d", &n);
-	for (i = 1; i <= n; i++) {
-		fact = fact * i;
-		printf("factµÄÖµÊÇ£º%d\n", fact);
-	}
+    printf("nï¿½Ä½×³ï¿½ï¿½ï¿½%d", fact);
 
-	printf("nµÄ½×³ËÊÇ%d", fact);
-
-
-
-
-
-
-
-
-
-
-
-	return 0;
+    return 0;
 }
