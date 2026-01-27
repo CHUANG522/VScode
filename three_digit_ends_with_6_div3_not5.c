@@ -26,11 +26,11 @@ int main()
 
         }printf("count is %d",count);*/
 
-    struct average k
+    struct average
     {
         int a = 0;
         double m = 0;
-    };
+    } k;
 
     return 0;
 }
