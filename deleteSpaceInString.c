@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 // 题目：请编写一个函数，用来删除字符串中的所有空格。
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* run this  program using the console pauser or add your own getch, system("pause") or input loop
+ */
 
 int main(void)
 {
