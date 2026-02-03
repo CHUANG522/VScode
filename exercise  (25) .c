@@ -6,7 +6,7 @@
 int main(void) {
 	
 	
-	printf("k");
+	printf("k\n");
 	
 	
 	
