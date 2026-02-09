@@ -7,7 +7,7 @@ int main(void)
 {
     double sum = 0;
     int temp = 0;
-    int N = 11;
+    int N = 10;
     for (int i = 1; i <= N; i++)
     {
         temp += i;
