@@ -12,11 +12,13 @@ int main(void)
     {
         for (int j = 0; j < arr_len - 1 - i; j++)
         {
+            int swar = 1;
             if (arr[j] > arr[j + 1])
             {
                 temp = arr[j + 1];
                 arr[j + 1] = arr[j];
                 arr[j] = temp;
+                swar = 0;
             }
         }
     }
