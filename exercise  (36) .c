@@ -10,7 +10,10 @@ int main(void)
 
     for (int i = 0; i < arr_len; i++)
     {
-        for (int j = 0; j <) }
+        for (int j = 0; j < arr_len - 1 - i; j++)
+        {
+        }
+    }
 
     return 0;
 }
