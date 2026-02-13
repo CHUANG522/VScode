@@ -8,12 +8,16 @@ int main(void)
     char string[] = "****A*BC*DeF*G*****";
     int arr_len = sizeof(string) / sizeof(string[0]);
     int j = 0;
-    for (int i = 0; i < arr_len; i++)
+    // int i=0;
+    char* p = string;
+    while (*p == '*')
     {
-        if (string[i] <= 'z' && string[i] >= 'a' && string[i] <= 'Z' && string[i] >= 'A' &&
-            string[i - 1] == '*' && string[i + 1] == '*')
-        {
-        }
+        p++;
+        i++;
+    }
+    while (*p != '*' && *p != '\0')
+    {
+        string[i] = *p;
     }
     return 0;
 }
