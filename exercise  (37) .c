@@ -5,19 +5,10 @@
 
 int main(void)
 {
-    char string[] = "****A*BC*DeF*G*****";
-    int arr_len = sizeof(string) / sizeof(string[0]);
-    int j = 0;
-    // int i=0;
-    char* p = string;
-    while (*p == '*')
+    double sum = 0;
+    for (double i = 1, n = 100000; i <= n; i++)
     {
-        p++;
-        i++;
-    }
-    while (*p != '*' && *p != '\0')
-    {
-        string[i] = *p;
+        sum += 1.0 / (i * i);
     }
     return 0;
 }
