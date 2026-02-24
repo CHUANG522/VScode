@@ -6,10 +6,7 @@
 int main(void)
 {
     char string[] = "123456";
-    char *p, *t;
-    p = t = string;
-    p = p + 3;
-    printf("%d", (int) (p - t));
+    int sum = (int) (string[1]);
 
     return 0;
 }
