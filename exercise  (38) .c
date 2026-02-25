@@ -5,8 +5,9 @@
 
 int main(void)
 {
-    char string[] = "123456";
-    int sum = (int) (string[1]);
+    int a = 12345;
 
+    printf("%7.9d", a);
+    printf("%d", a);
     return 0;
 }
