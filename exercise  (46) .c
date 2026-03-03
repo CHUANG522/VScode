@@ -4,13 +4,13 @@ struct student
 {
     float score;
     struct student* next;
-};
-#define STU struct student
-typedef STU link_node;
+};  // 定义结构体student为数据类型
+#define STU struct student  // 宏定义将struct studnet简化写为STU
+typedef STU link_node;      // 类型定义：将数据类型STU改写为link_node
 /* run this program using the console pauser or add your own getch, system("pause") or input
    loop */
 double fun(link_node* h);
-link_node* creat_node(float score);
+link_node* creat_node(float score);  // 创建节点的函数，返回新节点地址
 int main(void)
 {
     link_node stu1;
