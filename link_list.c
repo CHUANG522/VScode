@@ -43,7 +43,7 @@ link_node* creat_node(float score)
     if (new_node == NULL)
     {
         printf("内存分配失败");
-        exit(1);  //<stdlib.h>中的函数强制停止程序
+        exit(1);  //<stdlib.h>中的exit函数强制停止程序
     }
     new_node->score = score;
     new_node->next = NULL;  // 每创建一个节点都将节点所带地址置空
@@ -60,3 +60,13 @@ void append_node(link_node* head, float score)
     p->next = new_node;  // 链接新节点p指向新节点的地址
 }
 // free函数释放malloc内存
+void link_free(link_node* head)
+{
+    link_node *p = head, *temp;  // 定义p指向头节点，暂时变量temp
+    while (p != NULL)
+    {
+        temp = p;     // 将当前p的地址暂存在temp中
+        p = p->next;  // p指向写一个地址
+        free(temp);   // 释放当前地址的内存
+    }
+}
