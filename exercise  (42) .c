@@ -7,13 +7,12 @@
 int fun(int m, int arr[]);
 int main(void)
 {
-	double sum = 0;
-	double f = 0;
-	for (int i = 1; i <= 20; i++)
-	{
-		f += sqrt(i);
-		sum += f;
-	}
-
-	return 0;
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int* p = arr;
+    int n = 4;
+    int temp = 0;
+    temp = arr[n];
+    arr[n] = *p;
+    *p = temp;
+    return 0;
 }
