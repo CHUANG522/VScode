@@ -24,28 +24,28 @@ int main(void)
     for (int t = 1; t <= N; t++)
     {
         int n1, n2;
-        scanf("%d %d", &n1, &n2);
+
         if (scanf("%d %d", &n1, &n2) != 2)
         {
             printf("输入错误,不是有效整数");
             return -1;
         }
-        char const* string = (char*) malloc(sizeof(char) * n1 + 1);
-        char const* a = (char*) malloc(sizeof(char) * n2 + 1);
-        // const在数据类型内部表示指针指向的地址不能变
+        char* string = (char*) malloc(sizeof(char) * n1 + 1);
+        char* s = (char*) malloc(sizeof(char) * n2 + 1);
+
         // 注意这里申请内存的首地址string和a不要动他们的位置(const)，因为归还free时要首地址归还
-        if (a == NULL || string == NULL)
+        if (s == NULL || string == NULL)
         {
             perror("malloc错误原因:");
             free(string);
-            free(a);
+            free(s);
             exit(1);
         }
         scanf("%s", string);
-        scanf("%s", a);
+        scanf("%s", s);
 
         char* p = string;
-        char* t = a;
+        char* t = s;
         // 这里再用两个指针指向两块内存，而不是直接用string，a来操作
         while (*t)
         {
@@ -55,7 +55,7 @@ int main(void)
             }
             else if (*t == 'R')
             {
-                if (p < &string[n1]) p++;
+                if (p < &string[n1 - 1]) p++;  // s[n2] 是\0，要小于n2减一才移动
             }
 
             else if (*t == 'U')
@@ -77,7 +77,7 @@ int main(void)
         }
         printf("%s \n", string);
         free(string);
-        free(a);
+        free(s);
         // 释放时一定是首地址
     }
     return 0;
